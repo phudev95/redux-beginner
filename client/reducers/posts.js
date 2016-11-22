@@ -4,9 +4,16 @@
 // 2. Copy of current state
 
 function posts (state = [], action) {
-    console.log('State >>', state);
-    console.log('Action >>', action);
-    return state;
+    switch (action.type) {
+        case 'INCREMENT_LIKES':
+            const i = action.index;
+            state[i].likes += 1;
+
+            return [...state];
+            break;
+        default:
+            return state;
+    }
 }
 
 export default posts;
