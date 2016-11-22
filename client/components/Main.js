@@ -3,6 +3,7 @@ import { Link } from 'react-router';
 
 const Main = React.createClass({
     render() {
+        console.warn('render()', this);
         return (
             <div>
                 <h1>
