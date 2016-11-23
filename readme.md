@@ -1,4 +1,4 @@
-> Example: [https://ns-odntjiwohq.now.sh/](https://ns-odntjiwohq.now.sh/)
+> Example: [https://ns-fhmrsbafrp.now.sh/](https://ns-fhmrsbafrp.now.sh/)
 
 # Learn Redux
 
@@ -33,3 +33,6 @@ Run `npm build` to create a distro folder and a bundle.js file.
 3. npm run deploy
 4. Enjoy and take a coffee
 ```
+
+## Debug Redux with Redux Dev Tools
+![Screenshot](http://i.imgur.com/hZRb8j2.png)
