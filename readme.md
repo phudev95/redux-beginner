@@ -5,12 +5,12 @@
 A simple React + Redux implementation. This will be turned into a free video series once the app is totally fleshed out.
 
 ## Structure
-- `Actions`: Define Action Creators. Ex: Add + Remove comments, Add posts 
-- `Components`: Define more views in Application like: Comments, Single, PhotoGrid,...
-- `Data`: Data temp for process development.
-- `Reducers`: Handle data on State of Redux. It includes: Add + Remove comments, Increment Like of Posts, Add new Posts,...
+- `Actions`: Define Action Creators. Ex: Add + remove comments, increment the likes in post
+- `Components`: Define more views in application as: Comments, Single, PhotoGrid,...
+- `Data`: Create the seed data for process development.
+- `Reducers`: Handle data on State of Redux. It includes: Add + remove comments, increment **likes** in post, add new posts,...
 - `Styles`: Write CSS with stylus, it funny and cool ^^
-+ **reduxstagram.j**s: This is App root, it's define and config Routers
++ **reduxstagram.js**: This is App root, it's define and config Routers
 + **store.js**: Config state, config debug on Dev Tools Redux of Chrome browser, Define Store with Redux, History and config auto reload scripts with Hot Reloading Redux.
 
 ## Running
