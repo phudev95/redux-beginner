@@ -1,4 +1,4 @@
-import { createStore } from  'redux';
+import { createStore, compose } from  'redux';
 import { syncHistoryWithStore } from 'react-router-redux';
 import { browserHistory } from 'react-router';
 
@@ -15,11 +15,17 @@ const defaultState = {
     comments: comments
 };
 
-const store = createStore(reducer, defaultState);
+// Debug Stores with Redux Dev T
+const enhancers = compose(
+    window.devToolsExtension ? window.devToolsExtension() : f => f
+);
+
+const store = createStore(reducer, defaultState, enhancers);
 
 //--- Export history
 export const history = syncHistoryWithStore(browserHistory, store);
 
+// Hot Reloading Redux Reducers for Webpack
 if (module.hot) {
     module.hot.accept('./reducers/', () => {
         const nextRootReducer = require('./reducers/index').default;
