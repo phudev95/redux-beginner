@@ -7,7 +7,7 @@ function handleComment (state = [], action) {
             break;
 
         case 'REMOVE_COMMENT':
-            cloneState.splice(action.i, 1);
+            cloneState.splice(action.index, 1);
             return cloneState;
             break;
 
