@@ -1,15 +1,16 @@
-function handleComment(state = [], action) {
+function handleComment (state = [], action) {
+    const cloneState = [...state];
+
     switch (action.type) {
         case 'ADD_COMMENT':
-            return [
-                ...state,
-                {text: action.comment, user: action.author}
-            ];
+            return cloneState.concat({text: action.comment, user: action.author});
             break;
+
         case 'REMOVE_COMMENT':
-            console.log(state, action);
-            return state;
+            cloneState.splice(action.i, 1);
+            return cloneState;
             break;
+
         default:
             return state;
     }
@@ -22,7 +23,7 @@ function comments (state = [], action) {
             ...state,
 
             // Overwrite this post with a new one
-            [action.postId] : handleComment(state[action.postId], action)
+            [action.postId]: handleComment(state[action.postId], action)
         };
     }
 
